@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class PalindromeCheckerApp {
 /**
  MAIN CLASS UseCase1Palindrome App
- Use Case 4: Character Array Based Palindrome Check
+ Use Case 5:  Stack-Based Palindrome Checker
  Description:
  This class represents the entry point of the
  Palindrome Checker Management System.
@@ -18,7 +18,7 @@ public class PalindromeCheckerApp {
  **/
 public static void main(String[] args) {
     System.out.println("Welcome to Palindrome Checker App");
-    System.out.println("Version: 4.0");
+    System.out.println("Version: 5.0");
     System.out.println("System initialised successfully.");
     System.out.println("--------------------------------------------");
     System.out.println("Enter string to check if palindrome: ");
@@ -30,15 +30,13 @@ public static void main(String[] args) {
         System.out.println(s+" is not a palindrome");
 }
     public static boolean checkPalindrome(String s){
-        char[] arr;
-        arr = s.toCharArray();
-        int start = 0;
-        int end = s.length()-1;
-        while (start<end){
-            if (arr[start] == arr[end]) {
-                start++;
-                end--;
-            }
+        Stack<Character> stc = new Stack<>();
+        for (char c: s.toCharArray())
+            stc.push(c);
+
+        for (char c: s.toCharArray()){
+            if (c == stc.pop())
+                continue;
             else
                 return false;
         }
