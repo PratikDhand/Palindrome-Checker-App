@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class PalindromeCheckerApp {
 /**
  MAIN CLASS UseCase1Palindrome App
- Use Case 3:Palindrome Check Using String Reverse
+ Use Case 4: Character Array Based Palindrome Check
  Description:
  This class represents the entry point of the
  Palindrome Checker Management System.
@@ -18,7 +18,7 @@ public class PalindromeCheckerApp {
  **/
 public static void main(String[] args) {
     System.out.println("Welcome to Palindrome Checker App");
-    System.out.println("Version: 3.0");
+    System.out.println("Version: 4.0");
     System.out.println("System initialised successfully.");
     System.out.println("--------------------------------------------");
     System.out.println("Enter string to check if palindrome: ");
@@ -32,13 +32,13 @@ public static void main(String[] args) {
     public static boolean checkPalindrome(String s){
         char[] arr;
         arr = s.toCharArray();
-        char[] rev = new char[s.length()];
-        for (int i = 0; i < s.length(); i++) {
-            rev[i] = arr[s.length()-i-1];
-        }
-        for (int i = 0; i < s.length()/2; i++) {
-            if (arr[i] == rev[i])
-                continue;
+        int start = 0;
+        int end = s.length()-1;
+        while (start<end){
+            if (arr[start] == arr[end]) {
+                start++;
+                end--;
+            }
             else
                 return false;
         }
