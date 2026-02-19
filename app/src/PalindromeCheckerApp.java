@@ -9,7 +9,7 @@ public class PalindromeCheckerApp {
  * Starts execution from the main() method
  -Displays a welcome message
  Shows application version
- No palindrome logic is implemented yet.
+
  The goal is to establish a clear startup flow.
  @author Developer
  @version 1.0
