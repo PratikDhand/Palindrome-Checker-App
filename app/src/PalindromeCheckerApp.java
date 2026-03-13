@@ -1,9 +1,10 @@
 import java.util.Scanner;
+import java.util.Stack;
 
 public class PalindromeCheckerApp {
 /**
  MAIN CLASS UseCase1Palindrome App
- Use Case 5:  Stack-Based Palindrome Checker
+ Use Case 6:Queue + Stack Based Palindrome Check
  Description:
  This class represents the entry point of the
  Palindrome Checker Management System.
@@ -14,7 +15,7 @@ public class PalindromeCheckerApp {
 
  The goal is to establish a clear startup flow.
  @author PratikDhand
- @version 3.0
+ @version 6.0
  **/
 public static void main(String[] args) {
     System.out.println("Welcome to Palindrome Checker App");
